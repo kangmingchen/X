@@ -19,6 +19,16 @@ public abstract class XObject implements Serializable {
 	public final static String UTF8 = "UTF-8";
 	public final static String NODE_ROOT="x";
 	
+	protected Notice notice;
+
+	public Notice getNotice() {
+		return notice;
+	}
+
+	public void setNotice(Notice notice) {
+		this.notice = notice;
+	}
+	
 
 	@Override
 	public String toString() {

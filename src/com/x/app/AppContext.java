@@ -49,6 +49,27 @@ public class AppContext extends Application {
 	// 保存图片路径
 	private String saveImagePath;
 
+	@Override
+	public void onCreate() {
+		super.onCreate();
+
+		// 注册App异常奔溃处理器
+		Thread.setDefaultUncaughtExceptionHandler(AppException.getAppExceptionHandler());
+
+		init();
+	}
+	
+	/**
+	 * 初始化
+	 */
+	private void init() {
+		saveImagePath = getProperty(AppConfig.SAVE_IMAGE_PATH);
+		if (StringUtils.isEmpty(saveImagePath)) {
+			setProperty(AppConfig.SAVE_IMAGE_PATH, AppConfig.DEFAULT_SAVE_IMAGE_PATH);
+			saveImagePath = AppConfig.DEFAULT_SAVE_IMAGE_PATH;
+		}
+	}
+
 	/**
 	 * 判断当前版本是否兼容目标版本的方法
 	 * 
@@ -91,12 +112,15 @@ public class AppContext extends Application {
 		return uniqueID;
 	}
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
-
-		// 注册App异常奔溃处理器
-		Thread.setDefaultUncaughtExceptionHandler(null);
+	/**
+	 * 检测网络是否可用
+	 * 
+	 * @return
+	 */
+	public boolean isNetworkConnected() {
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo ni = cm.getActiveNetworkInfo();
+		return ni != null && ni.isConnectedOrConnecting();
 	}
 
 	/**
