@@ -1,4 +1,4 @@
-package com.x.modle;
+package com.x.app.bean;
 
 import java.io.Serializable;
 

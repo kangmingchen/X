@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    
+    <!-- 头部字体颜色 -->
+    <color name="head_text">#0e5986</color>
+    
+    <!-- 信息列表背景颜色 -->
+    <color name="listitem_transparent">#00000000</color>
+</resources>

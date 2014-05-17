@@ -7,7 +7,7 @@ import java.net.URLEncoder;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.x.modle.XObject;
+import com.x.app.bean.XObject;
 
 /**
  * <p>

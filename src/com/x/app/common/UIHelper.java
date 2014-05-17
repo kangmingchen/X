@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.text.style.URLSpan;
 import android.view.View;
 import android.webkit.WebView;
@@ -62,6 +63,25 @@ public class UIHelper {
 	}
 
 	/**
+	 * 显示内容详情
+	 * @param context
+	 * @param newsId
+	 */
+	public static void showNewsDetail(Context context, int newsId) {
+	}
+
+	public static void openBrowser(Context context, String url) {
+		try {
+			Uri uri = Uri.parse(url);
+			Intent it = new Intent(Intent.ACTION_VIEW, uri);
+			context.startActivity(it);
+		} catch (Exception e) {
+			e.printStackTrace();
+			ToastMessage(context, "无法浏览此网页", 500);
+		}
+	}
+
+	/**
 	 * 调用系统安装了的应用分享
 	 * 
 	 * @param activity
@@ -75,7 +95,6 @@ public class UIHelper {
 		intent.putExtra(Intent.EXTRA_TEXT, title + " " + url);
 		activity.startActivity(Intent.createChooser(intent, "选择分享"));
 	}
-
 
 	/**
 	 * 弹出Toast消息

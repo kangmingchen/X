@@ -8,7 +8,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Main extends Activity {
+/**
+ * 应用程序首页
+ * @author admin
+ *
+ */
+public class Main extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

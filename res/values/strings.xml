@@ -4,6 +4,11 @@
     <string name="app_name">X</string>
     <string name="hello_world">Hello world!</string>
     
+    <string name="head_logo">X</string>
+    <string name="head_search_logo">搜索</string>
+    <!-- 顶部标题栏 -->
+    <string name="head_title">X | 测试</string>
+    
     <string name="network_not_connected">网络连接失败，请检查网络设置</string>
     <string name="xml_parser_failed">数据解析异常</string>
     <string name="io_exception_error">文件流异常</string>
@@ -19,4 +24,12 @@
     <string name="app_error">应用程序错误</string>
     <string name="app_error_message">很抱歉，应用程序出现错误，即将退出。\n请提交报告，我们会尽快修复这个问题！</string>
     <string name="submit_report">提交报告</string>
+    
+    <string name="pull_to_img_text">下拉箭头</string>
+    
+    <string name="pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_tap_label">下拉可以刷新</string>
+	<string name="pull_to_refresh_update">最新更新：</string>
 </resources>
